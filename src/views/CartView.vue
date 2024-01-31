@@ -33,15 +33,15 @@ const calculateTotal = () => {
 };
 </script>
 <template>
-  <div class="border border-slate-500 p-4">
+  <VContainer>
     <h2>Shopping cart</h2>
     <ul>
-      <li v-for="item in cartProducts">
+      <li v-for="item in cartProducts" class="border-b-">
         {{ item.productName }}
         {{ item.price }}
-        <VBtn @click="deleteCartProduct(item.id)">Delete</VBtn>
+        <VBtn icon="mdi-delete" @click="deleteCartProduct(item.id)"></VBtn>
       </li>
     </ul>
     Total: ${{ cartTotal }}
-  </div>
+  </VContainer>
 </template>

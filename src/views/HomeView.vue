@@ -2,7 +2,6 @@
 import { ref } from "vue";
 import Products from "@/data/products.json";
 import ProductCard from "@/components/ProductCard.vue";
-import Cart from "@/components/Cart.vue";
 
 const products = ref(Products);
 const cartProducts = ref([]);
@@ -21,7 +20,6 @@ const handleAddToCart = (id) => {
           <h1>Home</h1>
         </VCol>
       </VRow>
-      <Cart :cartProducts="cartProducts" />
       <VRow tag="ul">
         <VCol
           tag="li"
