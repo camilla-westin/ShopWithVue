@@ -5,6 +5,12 @@ const props = defineProps({
     required: true,
   },
 });
+
+const emit = defineEmits(["add-to-cart"]);
+
+const addToCart = (id) => {
+  emit("add-to-cart", id);
+};
 </script>
 
 <template>
@@ -21,7 +27,7 @@ const props = defineProps({
       <VCardText>${{ product.price }}</VCardText>
     </RouterLink>
     <VCardActions>
-      <VBtn color="primary">Add to Cart</VBtn>
+      <VBtn color="primary" @click="addToCart(product.id)">Add to Cart</VBtn>
     </VCardActions>
   </VCard>
 </template>

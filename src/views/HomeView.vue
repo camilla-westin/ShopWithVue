@@ -2,8 +2,15 @@
 import { ref } from "vue";
 import Products from "@/data/products.json";
 import ProductCard from "@/components/ProductCard.vue";
+import Cart from "@/components/Cart.vue";
 
 const products = ref(Products);
+const cartProducts = ref([]);
+
+const handleAddToCart = (id) => {
+  const addedProduct = products.value.find((product) => product.id === id);
+  cartProducts.value.push(addedProduct);
+};
 </script>
 
 <template>
@@ -14,6 +21,7 @@ const products = ref(Products);
           <h1>Home</h1>
         </VCol>
       </VRow>
+      <Cart :cartProducts="cartProducts" />
       <VRow tag="ul">
         <VCol
           tag="li"
@@ -21,7 +29,7 @@ const products = ref(Products);
           :key="product.id"
           class="v-col-4"
         >
-          <ProductCard :product="product" />
+          <ProductCard :product="product" @add-to-cart="handleAddToCart" />
         </VCol>
       </VRow>
     </VContainer>
