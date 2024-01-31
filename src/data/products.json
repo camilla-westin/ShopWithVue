@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "productName": "Top 1",
+    "productDescription": "A stylish top",
+    "price": 20,
+    "inventoryStatus": "In Stock",
+    "size": "M",
+    "imgurl": "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?q=80&w=1544&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "id": 2,
+    "productName": "Top 2",
+    "productDescription": "A comfortable top",
+    "price": 25,
+    "inventoryStatus": "Out of Stock",
+    "size": "L",
+    "imgurl": "https://images.unsplash.com/photo-1620012253295-c15cc3e65df4?q=80&w=1530&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "id": 3,
+    "productName": "Bottom 1",
+    "productDescription": "A pair of jeans",
+    "price": 30,
+    "inventoryStatus": "In Stock",
+    "size": "32",
+    "imgurl": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "id": 4,
+    "productName": "Bottom 2",
+    "productDescription": "A pair of shorts",
+    "price": 15,
+    "inventoryStatus": "In Stock",
+    "size": "M",
+    "imgurl": "https://images.unsplash.com/photo-1584865288642-42078afe6942?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "id": 5,
+    "productName": "Shoe 1",
+    "productDescription": "A pair of sneakers",
+    "price": 50,
+    "inventoryStatus": "Out of Stock",
+    "size": "10",
+    "imgurl": "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?q=80&w=1598&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "id": 6,
+    "productName": "Shoe 2",
+    "productDescription": "A pair of boots",
+    "price": 70,
+    "inventoryStatus": "In Stock",
+    "size": "8",
+    "imgurl": "https://images.unsplash.com/photo-1603808033192-082d6919d3e1?q=80&w=1615&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  }
+]
