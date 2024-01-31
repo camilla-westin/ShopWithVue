@@ -1,8 +1,8 @@
 [
   {
     "id": 1,
-    "productName": "Top 1",
-    "productDescription": "A stylish top",
+    "productName": "Levi's Sweatshirt",
+    "productDescription": "A stylish sweatshirt for everyday wear",
     "price": 20,
     "inventoryStatus": "In Stock",
     "size": "M",
@@ -10,7 +10,7 @@
   },
   {
     "id": 2,
-    "productName": "Top 2",
+    "productName": "Casual men's shirt",
     "productDescription": "A comfortable top",
     "price": 25,
     "inventoryStatus": "Out of Stock",
@@ -19,7 +19,7 @@
   },
   {
     "id": 3,
-    "productName": "Bottom 1",
+    "productName": "Hilarious jeans",
     "productDescription": "A pair of jeans",
     "price": 30,
     "inventoryStatus": "In Stock",
@@ -28,8 +28,8 @@
   },
   {
     "id": 4,
-    "productName": "Bottom 2",
-    "productDescription": "A pair of shorts",
+    "productName": "Chinos for men",
+    "productDescription": "A pair of chinos for men",
     "price": 15,
     "inventoryStatus": "In Stock",
     "size": "M",
@@ -37,7 +37,7 @@
   },
   {
     "id": 5,
-    "productName": "Shoe 1",
+    "productName": "Sporty shoes",
     "productDescription": "A pair of sneakers",
     "price": 50,
     "inventoryStatus": "Out of Stock",
@@ -46,7 +46,7 @@
   },
   {
     "id": 6,
-    "productName": "Shoe 2",
+    "productName": "Mocha shoes",
     "productDescription": "A pair of boots",
     "price": 70,
     "inventoryStatus": "In Stock",
