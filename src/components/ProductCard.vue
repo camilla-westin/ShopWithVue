@@ -25,7 +25,11 @@ const handleAddToCart = () => {
         width="100%"
         cover
       ></v-img>
-      <VCardTitle>{{ product.productName }} </VCardTitle>
+      <VCardTitle
+        ><span class="font-noto font-semibold text-base">{{
+          product.productName
+        }}</span></VCardTitle
+      >
       <VCardText>${{ product.price }}</VCardText>
     </RouterLink>
     <VCardActions>

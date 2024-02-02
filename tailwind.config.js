@@ -8,6 +8,15 @@ export default {
         lightgrey: "#F9F9F9",
         darkgreen: "#3e6851",
       },
+      fontFamily: {
+        noto: ['"Noto Sans"', "sans-serif"],
+      },
+      fontWeight: {
+        light: 300,
+        normal: 400,
+        medium: 500,
+        bold: 700,
+      },
     },
   },
   plugins: [],

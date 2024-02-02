@@ -29,11 +29,13 @@ const handleDecreseQuantity = (id) => {
 <template>
   <div class="bg-greyish h-screen">
     <VContainer>
-      <h1 class="text-center text-3xl mt-4">Shopping cart</h1>
+      <h1 class="text-center text-3xl mt-4 font-noto font-semibold">
+        Shopping cart
+      </h1>
       <VRow class="mt-6">
         <VCol>
           <div>
-            <h2 class="font-semibold text-xl mb-4">Your order</h2>
+            <h2 class="font-noto font-semibold mb-4">Your order</h2>
 
             <ul>
               <li
@@ -51,7 +53,7 @@ const handleDecreseQuantity = (id) => {
                     ></v-img>
                   </VCol>
                   <VCol class="v-col-9">
-                    <div>{{ item.productName }}</div>
+                    <div class="font-semibold">{{ item.productName }}</div>
                     <div class="text-xs">Size: {{ item.size }}</div>
                     <div class="text-sm mt-3 mb-3">
                       Quantity:
@@ -72,7 +74,7 @@ const handleDecreseQuantity = (id) => {
                       ></VBtn>
                     </div>
 
-                    <div class="text-sm text-slate-400">
+                    <div class="text-sm text-slate-400 font-light">
                       Delivery 3-4 workdays
                     </div>
                     <div
@@ -95,7 +97,7 @@ const handleDecreseQuantity = (id) => {
         </VCol>
         <VCol>
           <div>
-            <h3 class="text-lg mb-4 font-semibold">Summary</h3>
+            <h3 class="text-lg mb-4 font-noto font-semibold">Summary</h3>
             <div class="bg-white p-6">
               <div
                 class="flex justify-between items-center mb-1 text-slate-600"
@@ -110,7 +112,7 @@ const handleDecreseQuantity = (id) => {
                 <span>$10</span>
               </div>
               <div
-                class="flex justify-between items-center mb-1 text-lg text-amber-900 font-semibold"
+                class="flex justify-between items-center mb-1 text-lg text-amber-900 font-bold"
               >
                 <span>Total</span>
                 <span>${{ summaryTotal }} </span>
