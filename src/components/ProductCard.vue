@@ -29,9 +29,13 @@ const handleAddToCart = () => {
       <VCardText>${{ product.price }}</VCardText>
     </RouterLink>
     <VCardActions>
-      <VBtn color="primary" @click="handleAddToCart(product.id)"
+      <VBtn
+        v-if="product.inventoryStatus == 'In Stock'"
+        color="primary"
+        @click="handleAddToCart(product.id)"
         >Add to Cart</VBtn
       >
+      <span v-else class="text-red-500">Out of Stock</span>
     </VCardActions>
   </VCard>
 </template>
