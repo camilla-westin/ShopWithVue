@@ -2,13 +2,16 @@
 import { ref } from "vue";
 import Products from "@/data/products.json";
 import ProductCard from "@/components/ProductCard.vue";
+import { useCartStore } from "@/store/addToCart";
+
+const cartStore = useCartStore();
 
 const products = ref(Products);
 const cartProducts = ref([]);
 
 const handleAddToCart = (id) => {
   const addedProduct = products.value.find((product) => product.id === id);
-  cartProducts.value.push(addedProduct);
+  cartStore.addToCart(addedProduct);
 };
 </script>
 

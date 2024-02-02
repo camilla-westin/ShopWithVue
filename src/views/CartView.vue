@@ -1,35 +1,15 @@
 <script setup>
-import { ref, watch } from "vue";
-const cartTotal = ref(0);
+import { computed } from "vue";
+import { useCartStore } from "@/store/addToCart";
 
-const props = defineProps({
-  cartProducts: {
-    type: Array,
-    required: true,
-  },
-});
+const cartStore = useCartStore();
+
+const cartProducts = computed(() => cartStore.cartProducts);
+const cartTotal = computed(() => cartStore.total);
 
 const deleteCartProduct = (id) => {
-  const index = props.cartProducts.findIndex((product) => product.id === id);
-  if (index !== -1) {
-    props.cartProducts.splice(index, 1);
-  }
-};
-
-watch(
-  props.cartProducts,
-  () => {
-    calculateTotal();
-  },
-  { deep: true }
-);
-
-const calculateTotal = () => {
-  let total = 0;
-  props.cartProducts.forEach((product) => {
-    total += product.price;
-  });
-  cartTotal.value = total;
+  const index = cartProducts.value.findIndex((product) => product.id === id);
+  cartStore.deleteFromCart(index);
 };
 </script>
 <template>
