@@ -2,7 +2,6 @@
 import { computed } from "vue";
 import Nav from "@/components/Nav.vue";
 import BackButton from "./BackButton.vue";
-import { ShoppingBagIcon } from "@heroicons/vue/24/outline";
 import { useCartStore } from "@/store/addToCart";
 
 const cartStore = useCartStore();
@@ -19,13 +18,11 @@ const cartProducts = computed(() => cartStore.cartProducts);
           <BackButton />
         </li>
         <li>
-          <RouterLink to="/cart"
-            ><span
-              ><ShoppingBagIcon
-                class="h-6 ml-2 -mt-1 hover:scale-105 transition"
-              />{{ cartProducts.length }}</span
-            ></RouterLink
-          >
+          <RouterLink to="/cart">
+            <v-badge :content="cartProducts.length" floating color="brown">
+              <v-icon icon="mdi-cart" size="medium"></v-icon>
+            </v-badge>
+          </RouterLink>
         </li>
       </ul>
     </VContainer>
