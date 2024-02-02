@@ -1,14 +1,17 @@
 import { defineStore } from "pinia";
+import Products from "@/data/products.json";
 
 export const useCartStore = defineStore({
-  id: "main",
+  id: "cart",
   state: () => ({
     cartProducts: [],
     total: 0,
+    products: Products,
   }),
   actions: {
-    addToCart(product) {
-      this.cartProducts.push(product);
+    addToCart(id) {
+      const addedProduct = this.products.find((product) => product.id === id);
+      this.cartProducts.push(addedProduct);
       this.calculateTotal();
     },
     deleteFromCart(index) {

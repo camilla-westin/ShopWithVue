@@ -1,4 +1,8 @@
 <script setup>
+import { useCartStore } from "@/store/addToCart";
+
+const cartStore = useCartStore();
+
 const props = defineProps({
   product: {
     type: Object,
@@ -6,10 +10,8 @@ const props = defineProps({
   },
 });
 
-const emit = defineEmits(["add-to-cart"]);
-
-const addToCart = (id) => {
-  emit("add-to-cart", id);
+const handleAddToCart = () => {
+  cartStore.addToCart(props.product.id);
 };
 </script>
 
@@ -27,7 +29,9 @@ const addToCart = (id) => {
       <VCardText>${{ product.price }}</VCardText>
     </RouterLink>
     <VCardActions>
-      <VBtn color="primary" @click="addToCart(product.id)">Add to Cart</VBtn>
+      <VBtn color="primary" @click="handleAddToCart(product.id)"
+        >Add to Cart</VBtn
+      >
     </VCardActions>
   </VCard>
 </template>
