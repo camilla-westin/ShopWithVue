@@ -15,6 +15,16 @@ const deleteCartProduct = (id) => {
 const summaryTotal = computed(() => {
   return cartTotal.value + 10;
 });
+
+const handleIncreaseQuantity = (id) => {
+  const index = cartProducts.value.findIndex((product) => product.id === id);
+  cartStore.increaseQuantity(index);
+};
+
+const handleDecreseQuantity = (id) => {
+  const index = cartProducts.value.findIndex((product) => product.id === id);
+  cartStore.decreaseQuantity(index);
+};
 </script>
 <template>
   <div class="bg-greyish h-screen">
@@ -42,6 +52,26 @@ const summaryTotal = computed(() => {
                   </VCol>
                   <VCol class="v-col-9">
                     <div>{{ item.productName }}</div>
+                    <div class="text-xs">Size: {{ item.size }}</div>
+                    <div class="text-sm mt-3 mb-3">
+                      Quantity:
+                      <VBtn
+                        icon="mdi-minus"
+                        size="x-small"
+                        width="20"
+                        height="20"
+                        @click="handleDecreseQuantity(item.id)"
+                      ></VBtn>
+                      <span class="px-3">{{ item.quantity }}</span>
+                      <VBtn
+                        icon="mdi-plus"
+                        size="x-small"
+                        width="20"
+                        height="20"
+                        @click="handleIncreaseQuantity(item.id)"
+                      ></VBtn>
+                    </div>
+
                     <div class="text-sm text-slate-400">
                       Delivery 3-4 workdays
                     </div>

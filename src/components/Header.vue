@@ -6,7 +6,7 @@ import { useCartStore } from "@/store/addToCart";
 
 const cartStore = useCartStore();
 
-const cartProducts = computed(() => cartStore.cartProducts);
+const totalItems = computed(() => cartStore.totalItems());
 </script>
 
 <template>
@@ -19,7 +19,7 @@ const cartProducts = computed(() => cartStore.cartProducts);
         </li>
         <li>
           <RouterLink to="/cart">
-            <v-badge :content="cartProducts.length" floating color="brown">
+            <v-badge :content="totalItems" floating color="brown">
               <v-icon icon="mdi-cart" size="medium"></v-icon>
             </v-badge>
           </RouterLink>

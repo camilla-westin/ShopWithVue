@@ -10,17 +10,41 @@ export const useCartStore = defineStore({
   }),
   actions: {
     addToCart(id) {
-      const addedProduct = this.products.find((product) => product.id === id);
-      this.cartProducts.push(addedProduct);
+      const productInCart = this.cartProducts.find(
+        (product) => product.id === id
+      );
+      if (productInCart) {
+        productInCart.quantity += 1;
+      } else {
+        const addedProduct = this.products.find((product) => product.id === id);
+        const productWithQuantity = { ...addedProduct, quantity: 1 };
+        this.cartProducts.push(productWithQuantity);
+      }
       this.calculateTotal();
     },
     deleteFromCart(index) {
       this.cartProducts.splice(index, 1);
       this.calculateTotal();
     },
+    increaseQuantity(index) {
+      this.cartProducts[index].quantity += 1;
+      this.calculateTotal();
+    },
+    decreaseQuantity(index) {
+      if (this.cartProducts[index].quantity > 1) {
+        this.cartProducts[index].quantity -= 1;
+      }
+      this.calculateTotal();
+    },
+    totalItems() {
+      return this.cartProducts.reduce(
+        (total, product) => total + product.quantity,
+        0
+      );
+    },
     calculateTotal() {
       this.total = this.cartProducts.reduce(
-        (total, product) => total + product.price,
+        (total, product) => total + product.price * product.quantity,
         0
       );
     },
