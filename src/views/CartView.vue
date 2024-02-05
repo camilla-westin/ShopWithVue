@@ -55,7 +55,9 @@ const handleDecreseQuantity = (id) => {
                   <VCol class="v-col-9">
                     <div class="font-semibold">{{ item.productName }}</div>
                     <div class="text-xs">Size: {{ item.size }}</div>
-                    <div class="text-xs">Variant: {{ item.variant }}</div>
+                    <div class="text-xs" v-if="item.variant">
+                      Variant: {{ item.variant }}
+                    </div>
                     <div class="text-sm mt-3 mb-3">
                       Quantity:
                       <VBtn

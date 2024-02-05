@@ -13,18 +13,21 @@ const totalItems = computed(() => cartStore.totalItems());
   <header class="bg-greyish h-12 w-full shadow-sm">
     <Nav />
     <VContainer>
-      <ul class="flex justify-between items-center">
-        <li class="-mt-2">
+      <div class="flex justify-between items-center">
+        <div class="-mt-2">
           <BackButton />
-        </li>
-        <li>
+        </div>
+        <RouterLink to="/" class="-mt-2"
+          ><span class="text-xl font-bold">ShopWithVue</span></RouterLink
+        >
+        <div>
           <RouterLink to="/cart">
             <v-badge :content="totalItems" floating color="brown">
               <v-icon icon="mdi-cart" size="medium"></v-icon>
             </v-badge>
           </RouterLink>
-        </li>
-      </ul>
+        </div>
+      </div>
     </VContainer>
   </header>
 </template>

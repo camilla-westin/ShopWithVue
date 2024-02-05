@@ -4,7 +4,8 @@
     @click="goBack"
     prepend-icon="mdi-keyboard-backspace"
     rounded
-  ></VBtn>
+    >Back</VBtn
+  >
 </template>
 
 <script setup>
