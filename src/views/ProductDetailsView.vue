@@ -37,7 +37,7 @@ const handleAddToCart = (id, size, variant) => {
           <h1 class="text-2xl">{{ product.productName }}</h1>
           <div class="text-amber-900 font-semibold">${{ product.price }}</div>
           <div class="mt-6 text-sm">{{ product.productDescription }}</div>
-          <div v-if="product.variants.length > 0" class="mt-6">
+          <div v-if="product.variants" class="mt-6">
             <v-select
               label="Variants"
               :items="product.variants"
