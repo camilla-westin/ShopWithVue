@@ -2,6 +2,7 @@
 import { computed } from "vue";
 import Nav from "@/components/Nav.vue";
 import BackButton from "./BackButton.vue";
+import SuccessAlert from "./SuccessAlert.vue";
 import { useCartStore } from "@/store/addToCart";
 
 const cartStore = useCartStore();
@@ -11,6 +12,7 @@ const totalItems = computed(() => cartStore.totalItems());
 
 <template>
   <header class="bg-greyish h-12 w-full shadow-sm">
+    <SuccessAlert />
     <Nav />
     <VContainer>
       <div class="flex justify-between items-center">

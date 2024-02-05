@@ -7,6 +7,7 @@ export const useCartStore = defineStore({
     cartProducts: [],
     total: 0,
     products: Products,
+    alertShown: false,
   }),
   actions: {
     addToCart(id, size, variant) {
@@ -30,6 +31,7 @@ export const useCartStore = defineStore({
         this.cartProducts.push(productWithQuantity);
       }
       this.calculateTotal();
+      this.showAlert();
     },
     deleteFromCart(index) {
       this.cartProducts.splice(index, 1);
@@ -56,6 +58,12 @@ export const useCartStore = defineStore({
         (total, product) => total + product.price * product.quantity,
         0
       );
+    },
+    showAlert() {
+      this.alertShown = true;
+      setTimeout(() => {
+        this.alertShown = false;
+      }, 2000);
     },
   },
 });
