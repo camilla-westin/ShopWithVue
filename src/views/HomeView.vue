@@ -21,7 +21,7 @@ const products = ref(Products);
           :key="product.id"
           class="v-col-4"
         >
-          <ProductCard :product="product" @add-to-cart="handleAddToCart" />
+          <ProductCard :product="product" />
         </VCol>
       </VRow>
     </VContainer>

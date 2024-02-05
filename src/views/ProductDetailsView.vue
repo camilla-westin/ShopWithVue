@@ -12,6 +12,8 @@ const props = defineProps({
 const products = ref(Products);
 const product = computed(() => products.value.find((p) => p.id === props.id));
 
+const selectedSize = ref("");
+
 const handleAddToCart = (id, size, variant) => {
   cartStore.addToCart(id, size, variant);
 };
