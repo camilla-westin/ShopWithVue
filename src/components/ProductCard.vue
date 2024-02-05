@@ -9,10 +9,6 @@ const props = defineProps({
     required: true,
   },
 });
-
-const handleAddToCart = () => {
-  cartStore.addToCart(props.product.id);
-};
 </script>
 
 <template>
@@ -25,6 +21,7 @@ const handleAddToCart = () => {
         width="100%"
         cover
       ></v-img>
+      <VCardSubtitle class="text-sm mt-2">{{ product.brand }}</VCardSubtitle>
       <VCardTitle
         ><span class="font-noto font-semibold text-base">{{
           product.productName
@@ -32,14 +29,5 @@ const handleAddToCart = () => {
       >
       <VCardText>${{ product.price }}</VCardText>
     </RouterLink>
-    <VCardActions>
-      <VBtn
-        v-if="product.inventoryStatus == 'In Stock'"
-        color="primary"
-        @click="handleAddToCart(product.id)"
-        >Add to Cart</VBtn
-      >
-      <span v-else class="text-red-500">Out of Stock</span>
-    </VCardActions>
   </VCard>
 </template>

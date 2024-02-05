@@ -9,15 +9,20 @@ export const useCartStore = defineStore({
     products: Products,
   }),
   actions: {
-    addToCart(id) {
+    addToCart(id, size) {
       const productInCart = this.cartProducts.find(
-        (product) => product.id === id
+        (product) => product.id === id && product.size === size
       );
+
       if (productInCart) {
         productInCart.quantity += 1;
       } else {
         const addedProduct = this.products.find((product) => product.id === id);
-        const productWithQuantity = { ...addedProduct, quantity: 1 };
+        const productWithQuantity = {
+          ...addedProduct,
+          quantity: 1,
+          size: size,
+        };
         this.cartProducts.push(productWithQuantity);
       }
       this.calculateTotal();

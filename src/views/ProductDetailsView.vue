@@ -12,8 +12,8 @@ const props = defineProps({
 const products = ref(Products);
 const product = computed(() => products.value.find((p) => p.id === props.id));
 
-const handleAddToCart = (id) => {
-  cartStore.addToCart(id);
+const handleAddToCart = (id, size) => {
+  cartStore.addToCart(id, size);
 };
 </script>
 
@@ -30,19 +30,36 @@ const handleAddToCart = (id) => {
             cover
           ></v-img>
         </VCol>
-        <VCol
-          ><h1 class="text-2xl">{{ product.productName }}</h1>
-          <div>{{ product.productDescription }}</div>
-          <div class="mt-4">${{ product.price }}</div>
-          <div v-if="product.inventoryStatus == 'In Stock'">
+        <VCol>
+          <span class="uppercase text-sm font-semibold">{{
+            product.brand
+          }}</span>
+          <h1 class="text-2xl">{{ product.productName }}</h1>
+          <div class="text-amber-900 font-semibold">${{ product.price }}</div>
+          <div class="mt-6 text-sm">{{ product.productDescription }}</div>
+
+          <div
+            v-if="product.inventoryStatus == 'In Stock'"
+            class="flex items-center justify-start"
+          >
+            <div class="w-32 mr-3">
+              <v-select
+                label="Size"
+                :items="product.sizes"
+                variant="outlined"
+                density="compact"
+                class="mt-6"
+                v-model="selectedSize"
+              ></v-select>
+            </div>
+
             <VBtn
               color="#3e6851"
-              class="mt-4"
-              @click="handleAddToCart(product.id)"
+              @click="handleAddToCart(product.id, selectedSize)"
               >Add to Cart</VBtn
             >
           </div>
-          <div v-else class="text-red-500">Out of Stock</div>
+          <div v-else class="text-red-500 mt-6">Out of Stock</div>
         </VCol>
       </VRow>
     </VContainer>

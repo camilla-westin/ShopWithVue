@@ -1,56 +1,62 @@
 [
   {
     "id": 1,
+    "brand": "Levi's",
     "productName": "Levi's Sweatshirt",
-    "productDescription": "A stylish sweatshirt for everyday wear",
+    "productDescription": "A stylish sweatshirt for everyday wear. Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular.",
     "price": 20,
     "inventoryStatus": "In Stock",
-    "size": "M",
+    "sizes": ["S", "M", "L", "XL"],
     "imgurl": "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?q=80&w=1544&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     "id": 2,
+    "brand": "Zara",
     "productName": "Casual men's shirt",
-    "productDescription": "A comfortable top",
+    "productDescription": "A comfortable top with on refusa continuar payar custosi traductores. At solmen va esser necessi far uniform grammatica, pronunciation e plu sommun paroles.",
     "price": 25,
     "inventoryStatus": "Out of Stock",
-    "size": "L",
+    "sizes": ["S", "M", "L", "XL"],
     "imgurl": "https://images.unsplash.com/photo-1620012253295-c15cc3e65df4?q=80&w=1530&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     "id": 3,
+    "brand": "H&M",
     "productName": "Hilarious jeans",
-    "productDescription": "A pair of jeans",
+    "productDescription": "A pair of jeans that ma quande lingues coalesce, li grammatica del resultant lingue es plu simplic e regulari quam ti del coalescent lingues. ",
     "price": 30,
     "inventoryStatus": "In Stock",
-    "size": "32",
+    "sizes": ["S", "M", "L", "XL"],
     "imgurl": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     "id": 4,
+    "brand": "Zara",
     "productName": "Chinos for men",
     "productDescription": "A pair of chinos for men",
     "price": 15,
     "inventoryStatus": "In Stock",
-    "size": "M",
+    "sizes": ["S", "M", "L", "XL"],
     "imgurl": "https://images.unsplash.com/photo-1584865288642-42078afe6942?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     "id": 5,
+    "brand": "Nike",
     "productName": "Sporty shoes",
     "productDescription": "A pair of sneakers",
     "price": 50,
     "inventoryStatus": "Out of Stock",
-    "size": "10",
+    "sizes": ["38", "39", "40", "41", "42", "43", "44", "45"],
     "imgurl": "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?q=80&w=1598&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     "id": 6,
+    "brand": "Gucci",
     "productName": "Mocha shoes",
     "productDescription": "A pair of boots",
     "price": 70,
     "inventoryStatus": "In Stock",
-    "size": "8",
+    "sizes": ["38", "39", "40", "41", "42", "43", "44", "45"],
     "imgurl": "https://images.unsplash.com/photo-1603808033192-082d6919d3e1?q=80&w=1615&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   }
 ]

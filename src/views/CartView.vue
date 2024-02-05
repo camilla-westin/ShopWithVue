@@ -97,7 +97,7 @@ const handleDecreseQuantity = (id) => {
         </VCol>
         <VCol>
           <div>
-            <h3 class="text-lg mb-4 font-noto font-semibold">Summary</h3>
+            <h3 class="mb-4 font-noto font-semibold">Summary</h3>
             <div class="bg-white p-6">
               <div
                 class="flex justify-between items-center mb-1 text-slate-600"
