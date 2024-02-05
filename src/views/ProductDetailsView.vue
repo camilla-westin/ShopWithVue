@@ -12,8 +12,8 @@ const props = defineProps({
 const products = ref(Products);
 const product = computed(() => products.value.find((p) => p.id === props.id));
 
-const handleAddToCart = (id, size) => {
-  cartStore.addToCart(id, size);
+const handleAddToCart = (id, size, variant) => {
+  cartStore.addToCart(id, size, variant);
 };
 </script>
 
@@ -37,6 +37,16 @@ const handleAddToCart = (id, size) => {
           <h1 class="text-2xl">{{ product.productName }}</h1>
           <div class="text-amber-900 font-semibold">${{ product.price }}</div>
           <div class="mt-6 text-sm">{{ product.productDescription }}</div>
+          <div v-if="product.variants.length > 0" class="mt-6">
+            <v-select
+              label="Variants"
+              :items="product.variants"
+              variant="outlined"
+              density="compact"
+              class="mt-6"
+              v-model="selectedVariant"
+            ></v-select>
+          </div>
 
           <div
             v-if="product.inventoryStatus == 'In Stock'"
@@ -55,7 +65,9 @@ const handleAddToCart = (id, size) => {
 
             <VBtn
               color="#3e6851"
-              @click="handleAddToCart(product.id, selectedSize)"
+              @click="
+                handleAddToCart(product.id, selectedSize, selectedVariant)
+              "
               >Add to Cart</VBtn
             >
           </div>

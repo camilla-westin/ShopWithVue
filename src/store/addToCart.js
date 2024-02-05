@@ -9,9 +9,12 @@ export const useCartStore = defineStore({
     products: Products,
   }),
   actions: {
-    addToCart(id, size) {
+    addToCart(id, size, variant) {
       const productInCart = this.cartProducts.find(
-        (product) => product.id === id && product.size === size
+        (product) =>
+          product.id === id &&
+          product.size === size &&
+          product.variant === variant
       );
 
       if (productInCart) {
@@ -22,6 +25,7 @@ export const useCartStore = defineStore({
           ...addedProduct,
           quantity: 1,
           size: size,
+          variant: variant,
         };
         this.cartProducts.push(productWithQuantity);
       }
