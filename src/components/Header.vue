@@ -12,9 +12,9 @@ const totalItems = computed(() => cartStore.totalItems());
 
 <template>
   <header class="bg-greyish h-12 w-full shadow-sm">
-    <SuccessAlert />
     <Nav />
-    <VContainer>
+    <VContainer class="relative">
+      <SuccessAlert />
       <div class="flex justify-between items-center">
         <div class="-mt-2">
           <BackButton />

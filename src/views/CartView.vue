@@ -27,7 +27,7 @@ const handleDecreseQuantity = (id) => {
 };
 </script>
 <template>
-  <div class="bg-greyish h-screen">
+  <div class="bg-greyish min-h-screen">
     <VContainer>
       <h1 class="text-center text-3xl mt-4 font-noto font-semibold">
         Shopping cart
