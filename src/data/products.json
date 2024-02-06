@@ -8,7 +8,8 @@
     "inventoryStatus": "In Stock",
     "sizes": ["S", "M", "L", "XL"],
     "imgurl": "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?q=80&w=1544&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "variants": ["White", "Black", "Grey"]
+    "variants": ["White", "Black", "Grey"],
+    "categories": ["Unisex", "Clothing", "Shirt"]
   },
   {
     "id": 2,
@@ -19,7 +20,8 @@
     "inventoryStatus": "Out of Stock",
     "sizes": ["S", "M", "L", "XL"],
     "imgurl": "https://images.unsplash.com/photo-1620012253295-c15cc3e65df4?q=80&w=1530&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "variants": ["White", "Black", "Grey"]
+    "variants": ["White", "Black", "Grey"],
+    "categories": ["Men", "Clothing", "Shirt"]
   },
   {
     "id": 3,
@@ -29,7 +31,8 @@
     "price": 30,
     "inventoryStatus": "In Stock",
     "sizes": ["S", "M", "L", "XL"],
-    "imgurl": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    "imgurl": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "categories": ["Women", "Clothing", "Pants"]
   },
   {
     "id": 4,
@@ -40,7 +43,8 @@
     "inventoryStatus": "In Stock",
     "sizes": ["S", "M", "L", "XL"],
     "imgurl": "https://images.unsplash.com/photo-1584865288642-42078afe6942?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "variants": ["Marine", "Black"]
+    "variants": ["Marine", "Black"],
+    "categories": ["Men", "Clothing", "Pants"]
   },
   {
     "id": 5,
@@ -50,7 +54,8 @@
     "price": 50,
     "inventoryStatus": "Out of Stock",
     "sizes": ["38", "39", "40", "41", "42", "43", "44", "45"],
-    "imgurl": "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?q=80&w=1598&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    "imgurl": "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?q=80&w=1598&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "categories": ["Unisex", "Shoes"]
   },
   {
     "id": 6,
@@ -60,6 +65,7 @@
     "price": 70,
     "inventoryStatus": "In Stock",
     "sizes": ["38", "39", "40", "41", "42", "43", "44", "45"],
-    "imgurl": "https://images.unsplash.com/photo-1603808033192-082d6919d3e1?q=80&w=1615&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    "imgurl": "https://images.unsplash.com/photo-1603808033192-082d6919d3e1?q=80&w=1615&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "categories": ["Men", "Shoes"]
   }
 ]
