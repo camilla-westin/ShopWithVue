@@ -1,8 +1,4 @@
 <script setup>
-import { useCartStore } from "@/store/addToCart";
-
-const cartStore = useCartStore();
-
 const props = defineProps({
   product: {
     type: Object,
@@ -12,8 +8,11 @@ const props = defineProps({
 </script>
 
 <template>
-  <VCard hover link>
+  <VCard hover link class="relative">
     <RouterLink :to="`/product/${product.id}`">
+      <div class="absolute top-2 right-2 z-10">
+        <VBtn icon="mdi-heart-outline" size="small"></VBtn>
+      </div>
       <v-img
         :src="product.imgurl"
         :alt="product.productName"
@@ -21,6 +20,7 @@ const props = defineProps({
         width="100%"
         cover
       ></v-img>
+
       <VCardSubtitle class="text-sm mt-2">{{ product.brand }}</VCardSubtitle>
       <VCardTitle
         ><span class="font-noto font-semibold text-base">{{
