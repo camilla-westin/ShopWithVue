@@ -31,8 +31,12 @@ const handleToggleFavorites = () => {
         >
 
         <div>
-          <button @click="handleToggleFavorites">
-            <v-icon icon="mdi-heart-outline" size="large"></v-icon>
+          <button @click="handleToggleFavorites" class="mr-3">
+            <v-icon
+              icon="mdi-heart-outline"
+              size="large"
+              class="-mt-2"
+            ></v-icon>
           </button>
           <RouterLink to="/cart">
             <v-badge :content="totalItems" floating color="brown">
