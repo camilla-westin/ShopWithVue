@@ -14,7 +14,6 @@ let favoritesIsOpen = ref(false);
 
 const handleToggleFavorites = () => {
   favoritesIsOpen.value = !favoritesIsOpen.value;
-  console.log(favoritesIsOpen);
 };
 
 const favoritesStore = useFavoritesStore();

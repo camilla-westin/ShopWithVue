@@ -41,19 +41,30 @@ watch(
         :key="favorite.id"
         class="flex"
       >
-        <VImg
-          :src="favorite.imgurl"
-          :alt="favorite.productName"
-          height="50px"
-          width="50px"
-          cover
-        />
-        <v-list-item-title>{{ favorite.productName }}</v-list-item-title>
-        <VBtn
-          prepend-icon="trash-can-outline"
-          class="ml-2"
-          @click="handleDeleteFavorite(favorite.id)"
-        ></VBtn>
+        <RouterLink :to="`/product/${favorite.id}`" v-slot="{ navigate }">
+          <div class="flex border-b pb-2 pt-1">
+            <div class="h-12 w-12 mr-2">
+              <VImg
+                :src="favorite.imgurl"
+                :alt="favorite.productName"
+                height="50px"
+                width="50px"
+                cover
+              />
+            </div>
+            <div class="flex items-center justify-between">
+              <v-list-item-title>{{ favorite.productName }}</v-list-item-title>
+              <div class="h-6 w-6">
+                <VBtn
+                  icon="mdi-trash-can-outline"
+                  class="ml-2"
+                  size="xsmall"
+                  @click.stop.prevent="handleDeleteFavorite(favorite.id)"
+                ></VBtn>
+              </div>
+            </div>
+          </div>
+        </RouterLink>
       </v-list-item>
     </ul>
   </VNavigationDrawer>
