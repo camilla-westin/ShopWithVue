@@ -92,7 +92,15 @@ const handleDecreseQuantity = (id) => {
                       <div class="text-sm text-slate-400 font-light">
                         Delivery 3-4 workdays
                       </div>
+
                       <div
+                        v-if="item.campaign"
+                        class="absolute bottom-4 right-4 text-red-500 font-semibold"
+                      >
+                        ${{ item.price }}
+                      </div>
+                      <div
+                        v-else
                         class="absolute bottom-4 right-4 text-amber-900 font-semibold"
                       >
                         ${{ item.price }}

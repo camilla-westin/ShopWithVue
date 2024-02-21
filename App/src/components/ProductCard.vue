@@ -28,6 +28,11 @@ const handleAddToFavorites = (id) => {
           @click.stop.prevent="handleAddToFavorites(product.id)"
         ></VBtn>
       </div>
+      <span
+        v-if="product.campaign"
+        class="z-10 absolute top-2 left-2 bg-red-500 rounded-xl text-white px-2 py-1 text-xs font-semibold"
+        >Campaign</span
+      >
       <v-img
         :src="product.imgurl"
         :alt="product.productName"

@@ -16,7 +16,10 @@ const selectedSize = ref("");
 const selectedVariant = ref("");
 
 const handleAddToCart = (id, size, variant) => {
-  cartStore.addToCart(id, size, variant);
+  const price = product.value.campaign
+    ? product.value.campaignPrice
+    : product.value.price;
+  cartStore.addToCart(id, size, variant, price);
 };
 </script>
 
@@ -38,7 +41,21 @@ const handleAddToCart = (id, size, variant) => {
             product.brand
           }}</span>
           <h1 class="text-2xl">{{ product.productName }}</h1>
-          <div class="text-amber-900 font-semibold">${{ product.price }}</div>
+          <div class="flex align-baseline">
+            <div
+              v-if="product.campaign"
+              class="text-amber-900 font-semibold mr-2 line-through"
+            >
+              ${{ product.price }}
+            </div>
+            <div v-else class="text-amber-900 font-semibold mr-2">
+              ${{ product.price }}
+            </div>
+            <div v-if="product.campaign" class="text-red-500 mt-2">
+              ${{ product.campaignPrice }}
+            </div>
+          </div>
+
           <div class="mt-6 text-sm">{{ product.productDescription }}</div>
           <div v-if="product.variants" class="mt-6">
             <v-select
