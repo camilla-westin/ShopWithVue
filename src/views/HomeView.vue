@@ -1,20 +1,14 @@
 <script setup>
-import { ref, computed } from "vue";
+import { ref } from "vue";
 import Products from "@/data/products.json";
 import ProductCard from "@/components/ProductCard.vue";
+import SortByPrice from "@/components/SortByPrice.vue";
 
 const products = ref(Products);
-const sortBy = ref("Descending price");
 
-const sortedProducts = computed(() => {
-  if (sortBy.value === "Descending price") {
-    return products.value.sort((a, b) => b.price - a.price);
-  } else if (sortBy.value === "Ascending price") {
-    return products.value.sort((a, b) => a.price - b.price);
-  } else {
-    return products.value;
-  }
-});
+const updateProducts = (sortedProducts) => {
+  products.value = sortedProducts;
+};
 </script>
 
 <template>
@@ -26,21 +20,15 @@ const sortedProducts = computed(() => {
         </VCol>
       </VRow>
       <VRow class="flex justify-end mr-1">
-        <div class="w-1/5">
-          <v-select
-            label="Sort by"
-            :items="['Descending price', 'Ascending price']"
-            variant="outlined"
-            density="compact"
-            width="w-24"
-            v-model="sortBy"
-          ></v-select>
-        </div>
+        <SortByPrice
+          :products.sync="products"
+          @update:products="updateProducts"
+        />
       </VRow>
       <VRow tag="ul">
         <VCol
           tag="li"
-          v-for="product in sortedProducts"
+          v-for="product in products"
           :key="product.id"
           class="v-col-4"
         >
