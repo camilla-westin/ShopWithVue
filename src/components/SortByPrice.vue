@@ -6,12 +6,12 @@ const props = defineProps({
   required: true,
 });
 
-const sortDirection = ref("Ascending price");
+const sortDirection = ref("Ascending");
 const emit = defineEmits(["update:products"]);
 
 const sortProducts = () => {
   const sortedProducts = [...props.products].sort((a, b) => {
-    if (sortDirection.value === "Ascending price") {
+    if (sortDirection.value === "Ascending") {
       return a.price - b.price;
     } else {
       return b.price - a.price;
@@ -25,8 +25,8 @@ watch([sortDirection, props.products], sortProducts);
 <template>
   <div class="w-1/5">
     <v-select
-      label="Sort by"
-      :items="['Descending price', 'Ascending price']"
+      label="Sort by price"
+      :items="['Descending', 'Ascending']"
       variant="outlined"
       density="compact"
       width="w-24"
