@@ -61,7 +61,11 @@ const handleDecreseQuantity = (id) => {
                       ></v-img>
                     </VCol>
                     <VCol class="v-col-9">
-                      <div class="font-semibold">{{ item.productName }}</div>
+                      <RouterLink :to="`/product/${item.id}`"
+                        ><div class="font-semibold">
+                          {{ item.productName }}
+                        </div></RouterLink
+                      >
                       <div class="text-xs">Size: {{ item.size }}</div>
                       <div class="text-xs" v-if="item.variant">
                         Variant: {{ item.variant }}
