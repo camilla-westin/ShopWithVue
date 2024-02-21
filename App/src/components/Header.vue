@@ -35,7 +35,7 @@ const hasFavorites = computed(() => favoritesStore.totalFavorites());
         <div>
           <button @click="handleToggleFavorites" class="mr-6">
             <v-badge :content="hasFavorites" floating color="brown">
-              <v-icon icon="mdi-heart-outline" size="medium"></v-icon>
+              <v-icon icon="mdi-heart" size="medium"></v-icon>
             </v-badge>
           </button>
           <RouterLink to="/cart">

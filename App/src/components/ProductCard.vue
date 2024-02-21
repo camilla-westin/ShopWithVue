@@ -47,7 +47,15 @@ const handleAddToFavorites = (id) => {
           product.productName
         }}</span></VCardTitle
       >
-      <VCardText>${{ product.price }}</VCardText>
+      <div class="flex pl-4 pb-4">
+        <span v-if="product.campaign" class="mr-2 text-red-500"
+          >${{ product.campaignPrice }}</span
+        >
+        <span v-if="product.campaign" class="line-through"
+          >${{ product.price }}</span
+        >
+        <span v-else>${{ product.price }}</span>
+      </div>
     </RouterLink>
   </VCard>
 </template>
