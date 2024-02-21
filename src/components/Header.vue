@@ -17,7 +17,7 @@ const handleToggleFavorites = () => {
 };
 
 const favoritesStore = useFavoritesStore();
-const totalFavorites = computed(() => favoritesStore.totalFavorites());
+const hasFavorites = computed(() => favoritesStore.totalFavorites());
 </script>
 
 <template>
@@ -32,15 +32,11 @@ const totalFavorites = computed(() => favoritesStore.totalFavorites());
         <RouterLink to="/" class="-mt-2"
           ><span class="text-xl font-bold">ShopWithVue</span></RouterLink
         >
-
         <div>
-          <button @click="handleToggleFavorites" class="mr-3">
-            <v-icon
-              icon="mdi-heart-outline"
-              size="large"
-              class="-mt-2"
-            ></v-icon>
-            {{ totalFavorites }}
+          <button @click="handleToggleFavorites" class="mr-6">
+            <v-badge :content="hasFavorites" floating color="brown">
+              <v-icon icon="mdi-heart-outline" size="medium"></v-icon>
+            </v-badge>
           </button>
           <RouterLink to="/cart">
             <v-badge :content="totalCartItems" floating color="brown">

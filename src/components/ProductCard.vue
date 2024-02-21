@@ -22,6 +22,9 @@ const handleAddToFavorites = (id) => {
         <VBtn
           icon="mdi-heart-outline"
           size="small"
+          :color="
+            favoritesStore.isInFavorites(product.id) ? '#e26f9f' : 'white'
+          "
           @click.stop.prevent="handleAddToFavorites(product.id)"
         ></VBtn>
       </div>

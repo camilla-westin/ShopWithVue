@@ -24,12 +24,20 @@ export const useFavoritesStore = defineStore({
         };
         this.favoriteProducts.push(favoriteData);
       }
+      this.calculateTotal();
+    },
+    isInFavorites(id) {
+      return this.favoriteProducts.some((product) => product.id === id);
     },
     deleteFromFavorites(index) {
       this.favoriteProducts.splice(index, 1);
+      this.calculateTotal();
+    },
+    calculateTotal() {
+      this.totalFavorites();
     },
     totalFavorites() {
-      this.total = this.favoriteProducts.length;
+      return (this.total = this.favoriteProducts.length);
     },
   },
 });
