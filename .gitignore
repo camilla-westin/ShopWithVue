@@ -28,3 +28,8 @@ coverage
 *.sw?
 
 *.tsbuildinfo
+
+/nuxtsanity/app/node_modules
+/nuxtsanity/studio/node_modules
+/nuxtsanity/app/.env
+/nuxtsanity/studio/.env
