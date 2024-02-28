@@ -13,12 +13,20 @@
     "@types/node": "^18.17.14",
     "nuxt": "^3.8.1",
     "postcss": "^8.4.31",
-    "postcss-nested": "^6.0.1"
+    "postcss-nested": "^6.0.1",
+    "tailwindcss": "^3.4.1"
   },
   "dependencies": {
+    "@heroicons/vue": "^2.1.1",
+    "@mdi/font": "^7.4.47",
     "@nuxtjs/google-fonts": "^3.0.0",
     "@nuxtjs/sanity": "^1.7.0",
+    "@pinia/nuxt": "^0.5.1",
     "@sanity/image-url": "^1.0.2",
-    "groq": "^3.9.1"
+    "groq": "^3.9.1",
+    "pinia": "^2.1.7"
+  },
+  "overrides": {
+    "vue": "latest"
   }
 }

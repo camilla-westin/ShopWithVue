@@ -14,6 +14,7 @@ export default defineNuxtConfig({
         },
       },
     ],
+    "@pinia/nuxt",
   ],
   sanity: {
     projectId: process.env.NUXT_ENV_SANITY_PROJECT_ID,
@@ -21,10 +22,13 @@ export default defineNuxtConfig({
     useCdn: true, // `false` if you want to ensure fresh data
     apiVersion: "2021-03-25",
   },
+  css: ["~/assets/main.css"],
   postcss: {
     plugins: {
-      autoprefixer: {},
       "postcss-nested": {},
+      "tailwindcss/nesting": {},
+      tailwindcss: {},
+      autoprefixer: {},
     },
   },
 });
