@@ -12,7 +12,6 @@ const { data: products } = await useSanityQuery<Product[]>(productQuery);
 <template>
   <section>
     <Card v-if="posts" v-for="post in posts" :key="post._id" :post="post" />
-    <Welcome v-if="posts?.length === 0" />
   </section>
   <section>
     <ProductCard
